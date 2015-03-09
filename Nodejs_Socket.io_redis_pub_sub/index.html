@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test PUB AND SUB</title>
+<script src="https://cdn.socket.io/socket.io-1.3.4.js"></script>
+<script>
+  var socket = io.connect('http://127.0.0.1:3000');
+    socket.on('news', function (data) {
+    alert(data);
+                socket.emit('my other event', { my: 'data' });
+        });
+
+</script>
+
+</head>
+
+
+<body>
+<h1>Test Page!</h1>
+</body>
+</html>
